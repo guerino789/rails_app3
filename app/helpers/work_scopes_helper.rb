@@ -1,0 +1,2 @@
+module WorkScopesHelper
+end

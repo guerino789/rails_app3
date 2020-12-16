@@ -33,4 +33,10 @@ class WorkScopesController < ApplicationController
     end
   end
 
+    private
+
+    def work_scope_params
+      params.require(:work_scope).permit(:description, :vessels_id, :shops_id)
+    end
+
 end

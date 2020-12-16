@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_15_220430) do
+ActiveRecord::Schema.define(version: 2020_12_16_213649) do
 
   create_table "shops", force: :cascade do |t|
     t.string "department"
@@ -18,6 +18,8 @@ ActiveRecord::Schema.define(version: 2020_12_15_220430) do
     t.string "workers"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "email"
+    t.string "password_digest"
   end
 
   create_table "vessels", force: :cascade do |t|
@@ -30,8 +32,8 @@ ActiveRecord::Schema.define(version: 2020_12_15_220430) do
 
   create_table "work_scopes", force: :cascade do |t|
     t.string "description"
-    t.integer "vessels_id"
-    t.integer "shops_id"
+    t.integer "vessel_id"
+    t.integer "shop_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

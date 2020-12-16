@@ -36,5 +36,11 @@ class VesselsController < ApplicationController
       render :edit
     end
   end
+
+  private
+
+  def vessel_params
+    params.require(:vessel).permit(:name, :maker, :length)
+  end 
   
 end
